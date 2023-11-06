@@ -1,0 +1,26 @@
+Step1: In cmd put command
+
+npm install express
+
+**************************************
+
+Step2: Create app.js file put code
+
+const express = require('express');
+const app = express();
+const port = 3000; // You can choose any available port
+
+// Define a route that responds with "Hello World"
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+
+// Start the Express server
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
+});
+
+step3: In cmd put command
+
+node app.js
+

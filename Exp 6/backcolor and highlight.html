@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background and font weight changer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #contain{
+            font-size: larger;
+            width: 50%;
+        }
+        #contain div{
+            width: 100%;
+            height: 10vh;
+            border: 2px solid black;
+            margin: 0px -1px -2px 0; 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="contain">
+            <div id="orange">Orange</div>
+            <div id="white">White<span id="line"></span></div>
+            <div id="green">Green</div>
+        </div>
+    </div>
+</body>
+<script>
+    o = document.getElementById('orange');
+    w = document.getElementById('white');
+    g = document.getElementById('green');
+    o.addEventListener('click',()=>{
+        o.style.backgroundColor = 'orange';
+        o.style.fontSize = '30px'
+    })
+    w.addEventListener('click',()=>{
+        w.style.backgroundColor = 'white';
+        w.style.fontSize = '30px'
+    })
+    g.addEventListener('click',()=>{
+        g.style.backgroundColor = 'green';
+        g.style.fontSize = '30px'
+    })
+</script>
+</html>

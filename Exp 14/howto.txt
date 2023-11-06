@@ -1,0 +1,77 @@
+Step1: In cmd put command
+
+npx create-react-app spa-demo
+
+**************************************
+
+Step2: 
+create Home.js file in src folder 
+
+import React from 'react';
+
+function Home() {
+  return (
+    <div>
+      <h2>Home Page</h2>
+      <p>Welcome to the Home Page.</p>
+    </div>
+  );
+}
+
+export default Home;
+
+**************************************
+create About.js file in src folder
+
+import React from 'react';
+
+function About() {
+  return (
+    <div>
+      <h2>About Page</h2>
+      <p>Learn more about us on the About Page.</p>
+    </div>
+  );
+}
+
+export default About;
+
+**************************************
+open src/App.js file and copy the code
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Home from '/Documents/PVPPCOE/Sem 5/IP/Exp 14/spa-demo/src/Home';
+import About from '/Documents/PVPPCOE/Sem 5/IP/Exp 14/spa-demo/src/About';
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="C:\Documents\PVPPCOE\Sem 5\IP\Exp 14\spa-demo\src\Home.js">Home</Link>
+            </li>
+            <li>
+              <Link to="C:\Documents\PVPPCOE\Sem 5\IP\Exp 14\spa-demo\src\About.js">About</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <hr />
+
+        <Route exact path="/Documents/PVPPCOE/Sem 5/IP/Exp 14/spa-demo/src/Home" component={Home} />
+        <Route path="/Documents/PVPPCOE/Sem 5/IP/Exp 14/spa-demo/src/About" component={About} />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+
+**************************************
+
+Step3: In cmd put command
+
+npm start

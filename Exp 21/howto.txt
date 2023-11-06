@@ -1,0 +1,58 @@
+Step1: Create a file with name client.js
+
+const net = require('net');
+
+const client = net.connect({ port: 3000 }, () => {
+  console.log('Connected to the server');
+  
+  // Send a message to the server
+  client.write('Hello, surya here!\n');
+});
+
+client.on('data', (data) => {
+  console.log('Received from server:', data.toString().trim());
+});
+
+client.on('end', () => {
+  console.log('Disconnected from the server');
+});
+
+**************************************
+
+Step2:Create a file with name client.js
+
+const net = require('net');
+
+const server = net.createServer((socket) => {
+  console.log('Client connected');
+
+  socket.on('data', (data) => {
+    const message = data.toString().trim();
+    console.log('Received from client:', message);
+
+    // Echo the message back to the client
+    socket.write(`Server: Received "${message}"\n`);
+    socket.write(`Shivay this side. How can I help you ??`)
+  });
+
+  socket.on('end', () => {
+    console.log('Client disconnected');
+  });
+});
+
+const port = 3000;
+
+server.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
+
+**************************************
+
+Step3: In cmd put command
+
+node client.js in one cmd 
+
+and 
+
+node server.js in other cmd
+

@@ -1,0 +1,30 @@
+Step1: Create a file with name buffer-demo.js
+
+// Create a buffer with 10 bytes
+const buffer = Buffer.alloc(11);
+
+// Write data to the buffer
+buffer.write('Hello');
+
+// Read and display the buffer
+console.log('Buffer contents:', buffer.toString());
+
+// Modify the buffer
+buffer.write(' World', 5); // Write starting at position 5
+
+// Display the modified buffer
+console.log('Modified buffer:', buffer.toString());
+
+// Copy the buffer
+const copyBuffer = Buffer.from(buffer);
+
+// Display the copied buffer
+console.log('Copied buffer:', copyBuffer.toString());
+
+
+**************************************
+
+Step2: In cmd put command
+
+node buffer-node.js
+

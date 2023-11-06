@@ -1,0 +1,26 @@
+Step1: Create a file with name fileopsinnode.js
+
+const fs = require('fs');
+
+// File path
+const filePath = 'sample';
+
+// Content to write to the file
+const content = 'This is a sample paragraph that we are writing to a file using Node.js.';
+
+// Create a file and write content to it
+fs.writeFile(filePath, content, (err) => {
+  if (err) {
+    console.error('Error creating/writing the file:', err);
+  } else {
+    console.log('File created and content written successfully.');
+  }
+});
+
+
+**************************************
+
+Step2: In cmd put command
+
+node fileopsinnode.js
+

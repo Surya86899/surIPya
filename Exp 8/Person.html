@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Display</title>
+</head>
+<body>
+    Open Console Log
+</body>
+<script>
+    class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    displayDetails() {
+        console.log(`Name: ${this.name}\nAge: ${this.age}`);
+    }
+}
+
+class Student extends Person {
+    constructor(name, age, course, marks) {
+        super(name, age);
+        this.course = course;
+        this.marks = marks;
+    }
+
+    displayDetails() {
+        super.displayDetails();
+        console.log(`Course: ${this.course}\nMarks: ${this.marks}`);
+    }
+}
+
+// Create two instances of Student class
+const student1 = new Student('Surya', 20, 'Information Technology', 95);
+const student2 = new Student('Shivay', 20, 'Computer Science', 85);
+
+// Display details of the two students
+console.log('Details of Student 1:');
+student1.displayDetails();
+console.log('\nDetails of Student 2:');
+student2.displayDetails();
+
+</script>
+</html>

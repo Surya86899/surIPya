@@ -1,0 +1,120 @@
+Step1: In cmd put command
+
+npx create-react-app my-registration-app
+
+**************************************
+
+Step2: open src/App.js file and copy the code
+
+import React, { Component } from 'react';
+
+class RegistrationForm extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: '',
+      email: '',
+      password: '',
+      errors: {
+        name: '',
+        email: '',
+        password: '',
+      },
+    };
+  }
+
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value }, () => {
+      this.validateField(name, value);
+    });
+  };
+
+  validateField(fieldName, value) {
+    let errors = this.state.errors;
+
+    switch (fieldName) {
+      case 'name':
+        errors.name = value.length < 3 ? 'Name is too short' : '';
+        break;
+      case 'email':
+        errors.email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? '' : 'Email is not valid';
+        break;
+      case 'password':
+        errors.password = value.length < 6 ? 'Password is too short' : '';
+        break;
+      default:
+        break;
+    }
+
+    this.setState({ errors });
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    if (this.formIsValid()) {
+      // Handle form submission here
+      console.log('Form submitted with data:', this.state);
+    } else {
+      console.log('Form has validation errors. Please fix them.');
+    }
+  };
+
+  formIsValid() {
+    const { name, email, password, errors } = this.state;
+    return name && email && password && !errors.name && !errors.email && !errors.password;
+  }
+
+  render() {
+    const { name, email, password, errors } = this.state;
+
+    return (
+      <div>
+        <h2>Registration Form</h2>
+        <form onSubmit={this.handleSubmit}>
+          <div>
+            <label>Name:</label>
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={this.handleInputChange}
+            />
+            <span className="error">{errors.name}</span>
+          </div>
+          <div>
+            <label>Email:</label>
+            <input
+              type="email"
+              name="email"
+              value={email}
+              onChange={this.handleInputChange}
+            />
+            <span className="error">{errors.email}</span>
+          </div>
+          <div>
+            <label>Password:</label>
+            <input
+              type="password"
+              name="password"
+              value={password}
+              onChange={this.handleInputChange}
+            />
+            <span className="error">{errors.password}</span>
+          </div>
+          <div>
+            <button type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
+
+export default RegistrationForm;
+
+**************************************
+
+Step3: In cmd put command
+
+npm start

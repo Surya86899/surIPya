@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback Demo</title>
+</head>
+<body>
+    <h1>Callback Demo</h1>
+    <div id="output" style="font-size: 25px;"></div>
+
+    <script>
+        function delayedFunction(callback) {
+            setTimeout(function () {
+                const output = document.getElementById('output');
+                output.innerHTML = 'Function executed after a delay';
+                callback();
+            }, 2000);
+        }
+
+        function callbackFunction() {
+            const output = document.getElementById('output');
+            output.innerHTML += '<br>Callback function executed';
+        }
+
+        delayedFunction(callbackFunction);
+
+        const output = document.getElementById('output');
+        output.innerHTML += '<br>Program continues...';
+    </script>
+</body>
+</html>

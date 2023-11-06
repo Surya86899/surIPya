@@ -1,0 +1,38 @@
+Step1: Create a file with name fileopsinnode.js
+
+const fs = require('fs');
+
+// File path (existing file to append text and rename)
+const filePath = 'sample.txt';
+
+// Text to append to the file
+const textToAppend = '\nThis text is appended to the existing file.';
+
+// New file name (after renaming)
+const newFilePath = 'new-sample.txt';
+
+// Append text to an existing file
+fs.appendFile(filePath, textToAppend, (appendErr) => {
+  if (appendErr) {
+    console.error('Error appending text to the file:', appendErr);
+  } else {
+    console.log('Text appended to the file successfully.');
+    
+    // Rename the file
+    fs.rename(filePath, newFilePath, (renameErr) => {
+      if (renameErr) {
+        console.error('Error renaming the file:', renameErr);
+      } else {
+        console.log('File renamed successfully.');
+      }
+    });
+  }
+});
+
+
+**************************************
+
+Step2: In cmd put command
+
+node fileopsinnode.js
+

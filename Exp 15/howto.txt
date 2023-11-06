@@ -1,0 +1,44 @@
+Step1: In cmd put command
+
+npx create-react-app effectrefdemo
+
+**************************************
+
+Step2: open src/App.js file and copy the code
+
+import React, { useState, useEffect, useRef } from 'react';
+
+function App() {
+  // State for the counter
+  const [count, setCount] = useState(0);
+
+  // Create a ref for the input field
+  const inputRef = useRef(null);
+
+  // Effect to focus on the input field when the component mounts
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []); // Empty dependency array ensures this effect runs once on mount
+
+  return (
+    <div>
+      <h1>Counter: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+
+      <input
+        type="text"
+        ref={inputRef} // Attach the ref to the input element
+        placeholder="Focus me"
+      />
+    </div>
+  );
+}
+
+export default App;
+
+
+**************************************
+
+Step3: In cmd put command
+
+npm start

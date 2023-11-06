@@ -1,0 +1,25 @@
+Step1: In cmd put command
+
+npx create-react-app hello-world-app
+
+**************************************
+
+Step2: open src/App.js file and copy the code
+
+import React from 'react';
+
+function App() {
+  return (
+    <div>
+      <h1>Hello World</h1>
+    </div>
+  );
+}
+
+export default App;
+
+**************************************
+
+Step3: In cmd put command
+
+npm start

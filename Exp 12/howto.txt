@@ -1,0 +1,57 @@
+Step1: In cmd put command
+
+npx create-react-app my-react-app
+
+**************************************
+
+Step2: open src/App.js file and copy the code
+
+import React, { Component } from 'react';
+
+// Child component that receives a prop
+class Counter extends Component {
+  render() {
+    return <p>Counter: {this.props.count}</p>;
+  }
+}
+
+// Child component that receives a prop
+class Greeting extends Component {
+  render() {
+    return <p>Greeting: {this.props.message}</p>;
+  }
+}
+
+// Parent component with state
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      count: 0,
+      message: 'Hello, React!',
+    };
+  }
+
+  incrementCounter = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>State and Props in React</h1>
+        <Counter count={this.state.count} /> {/* Pass count as a prop */}
+        <Greeting message={this.state.message} /> {/* Pass message as a prop */}
+        <button onClick={this.incrementCounter}>Increment Counter</button>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+**************************************
+
+Step3: In cmd put command
+
+npm start

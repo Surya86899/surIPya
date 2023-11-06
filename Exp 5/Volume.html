@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fillup{
+            width: 20%;
+            padding: 1%;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        .fillup input,button{
+            width: 100%;
+            height: 40px;
+            margin: 2% 0;
+            font-size: larger;
+            border-radius: 20px;
+            text-align: center;
+        }
+        ::placeholder{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fillup">
+            <input id="rad" type="number" placeholder="Please Enter Radius">
+            <input id="hei" type="number" placeholder="Please Enter Height">
+            <button type="button" id="inputtaker">Calculate Volume</button>
+            <button id="answer">Answer</button>
+        </div>
+    </div>
+</body>
+<script>
+    inputtaker = document.getElementById('inputtaker');
+    answer = document.getElementById('answer');
+
+    inputtaker.addEventListener('click',() =>{
+        radius = parseFloat(document.getElementById('rad').value);
+        height = parseFloat(document.getElementById('hei').value);
+
+        const V = radius * radius * height * 3.14;
+        answer.innerHTML = `Volume: ${V.toFixed(2)}`;
+    })
+</script>
+</html>

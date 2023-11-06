@@ -1,0 +1,25 @@
+Step1: Create a file with name async-demo.js
+
+const fs = require('fs');
+
+// File path to read
+const filePath = 'sample.txt';
+
+// Asynchronously read the file
+fs.readFile(filePath, 'utf8', (err, data) => {
+  if (err) {
+    console.error('Error reading the file:', err);
+  } else {
+    console.log('File content:');
+    console.log(data);
+  }
+});
+
+console.log('Contents In the file will appear');
+
+**************************************
+
+Step2: In cmd put command
+
+node async-demo.js
+

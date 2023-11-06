@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <!-- Font Awesome JS script -->
+    <script src="https://kit.fontawesome.com/1dc6e27830.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        .resume-container {
+            width: 595px;
+            height: 842px;
+            margin-top: 10px;
+            padding: 5px;
+            display: flex;
+            border: 2px solid black;
+        }
+
+        /* Left side of resume */
+        .left-resume {
+            width: 30%;
+            border-right: 1px solid grey;
+        }
+
+        .left-resume div {
+            padding: 8%;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #346786;
+        }
+
+        h2 {
+            color: #346786;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 12px;
+            margin: 2px 0;
+            color: #f26464;
+        }
+
+
+        h2:before {
+            content: "■";
+            transform: rotateX(43deg);
+            rotate: 43deg;
+            color: #ed0505;
+            text-shadow: black 0 0 3px;
+            margin: 0 15px 0px 0;
+            padding-bottom: 92px;
+        }
+
+        #profile img {
+            aspect-ratio: 1/1;
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .right-resume {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right-resume div {
+            /* border-top: 1px solid black; */
+            padding: 4% 5% 0 6%;
+            width: 100%;
+        }
+
+        #personal-details {
+            padding-top: 2%;
+        }
+
+        #link-details {
+            padding: 5px 0;
+        }
+
+        #link-details address {
+            font-size: small;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: repeat(2, 50%);
+            cursor: pointer;
+        }
+
+        #link-details address p {
+            display: inline-block;
+        }
+
+        #projects ul li {
+            font-size: large;
+        }
+
+        .light {
+            color: #99B3C5;
+            text-align: end;
+        }
+
+        #education ul p {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <div class="left-resume">
+            <!-- Profile Photo -->
+            <div id="profile">
+                <img src="surya profile image .jpg" alt="Profile Photo">
+            </div>
+            <!-- Skills -->
+            <div id="skills">
+                <ul>
+                    <h2>Skills</h2>
+                    <li>Time Management</li>
+                    <li>Problem-Solving</li>
+                    <li>Good Writing Skills</li>
+                </ul>
+            </div>
+            <!-- Languages -->
+            <div id="languages">
+                <h2>Languages</h2>
+                <ul>
+                    <li>HTML <i class="fa-brands fa-html5" style="color: #eb8640;"></i></li>
+                    <li>CSS <i class="fa-brands fa-css3-alt" style="color: #3c9cd7;"></i></li>
+                    <li>JS <i class="fa-brands fa-js" style="color: #e9ca32;"></i></li>
+                    <li>C <i class="fa-sharp fa-solid fa-c" style="color: #00589c;"></i></li>
+                    <li>JAVA <i class="fa-brands fa-java" style="color: #3f8aa8;"></i></li>
+                    <li>PYTHON <i class="fa-brands fa-python" style="color: #3572a2;"></i></li>
+                </ul>
+            </div>
+            <!-- Hobbies -->
+            <div id="hobbies">
+                <h2>Hobbies</h2>
+                <li>Love playing sports like Basketball,Football and Cricket</li>
+                <li>Drawing</li>
+                <li>Cooking</li>
+            </div>
+        </div>
+        <div class="right-resume">
+            <!-- Personal Details -->
+            <div id="personal-details">
+                <h1>K Suryanarayan Dora</h1>
+                <h3>Web Developer||Coding Enthusiast || Learner</h3>
+                <p id="about">
+                    Enthusiastic learner with academic abilities and technical knowledge to succeed in different roles.
+                    Ready to gain additional knowledge and abilities from training and experience.
+                    Excels in multitasking and time management.
+                </p>
+                <div id="link-details">
+                    <address>
+                        <p>
+                            <i class="fa-solid fa-envelope" style="color: #f26464;"></i>dora42240@gmail.com
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-phone" style="color: #f26464;"></i> +91-8689905648
+                        </p>
+                        <p>
+                            <i class="fa-brands fa-square-github" style="color: #f26464;"></i> Surya86899/Surya86899
+
+                        </p>
+                        <p>
+                            <i class="fa-brands fa-linkedin" style="color: #f26464;"></i>k-suryanarayan-dora-967847247
+                        </p>
+                    </address>
+                </div>
+            </div>
+            <!-- Projects -->
+            <div id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li>Building Management system</li>
+                    <p>Frontend Project built by Java Swing</p>
+                    <a href="https://github.com/Surya86899/BMS">https://github.com/Surya86899/BMS</a>
+                    <li>Career-Dendogram</li>
+                    <p>
+                        Career counselling website program that
+                        recommends career on the basis of tests
+                    </p>
+                    <a href="https://github.com/Surya86899/CareerDendogram">https://github.com/Surya86899/CareerDendogram</a>
+                    <li>Eco-Scrap</li>
+                    <p>
+                        Eco Scrap is a website for selling scrap at best price offered and an environment that will allow buying of useful scrap.
+                    </p>
+                    <a href="https://github.com/Surya86899/Eco-Scrap">https://github.com/Surya86899/Eco-Scrap</a>
+                    <li>This Resume build by HTML and CSS</li>
+                </ul>
+            </div>
+            <!-- Certifications -->
+            <div id="certifications">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Web Development Fundamentals</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>My SQL</li>
+                    <li>Business Model Canvas and Case Study Workshop</li>
+                </ul>
+            </div>
+            <!-- Education -->
+            <div id="education">
+                <h2>Education</h2>
+                <ul>
+                    <li>Bachelors in Engineering</li>
+                    <p>Vasantdada Patil Pratishthan's <br>College of Engineering
+                        <br>Mumbai 2025
+                    </p>
+                    <p class="light">Currently 87.11%</p>
+                    <li>Higher Secondary Certificate</li>
+                    <p>Bhavans College,<br>PCM, Vocational Science <br>Mumbai 2021 </p>
+                    <p class="light">91%</p>
+                    <li>Secondary School Certificate
+                    </li>
+                    <p>Dominic Savio High School<br>Mumbai 2019</p>
+                    <p class="light">83.20%</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

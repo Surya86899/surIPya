@@ -1,0 +1,21 @@
+Step1: Create helloworld.js file put code
+
+const http = require('http');
+
+// Create an HTTP server
+const server = http.createServer((req, res) => {
+  res.writeHead(500, { 'Content-Type': 'text/plain' });
+  res.end('Hello World\n');
+});
+
+// Listen on port 3000
+const port = 3000;
+server.listen(port, () => {
+  console.log(`Server listening on http://localhost:${port}`);
+});
+
+*********************************************************
+step2: In cmd put command
+
+node helloworld.js
+
