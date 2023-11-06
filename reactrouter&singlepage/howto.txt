@@ -1,6 +1,6 @@
 Step1: In cmd put command
 
-npx create-react-app spa-demo
+npm create-react-app spa-demo
 
 **************************************
 
